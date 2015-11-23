@@ -62,6 +62,9 @@ On the [client](https://github.com/Shraddha512/AdvancedDocker/blob/master/Ambass
 ```
 docker-compose run redis_client
 ```
+Output:
+
+![redis client](https://github.com/Shraddha512/AdvancedDocker/blob/master/images/Screen%20Shot%202015-11-22%20at%2011.21.56%20PM.png)
 
 #### 3. Task 3 
 **Docker Deploy**: Extend the deployment workshop to run a docker deployment process.
