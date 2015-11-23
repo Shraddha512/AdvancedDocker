@@ -45,9 +45,8 @@ sudo docker run --link container1:server --rm -it --name container2 file2 curl s
 Output:
 ![linking containers](https://github.com/Shraddha512/AdvancedDocker/blob/master/images/Screen%20Shot%202015-11-22%20at%2011.38.09%20PM.png)
 
-Screencast:
-
-[![ScreenShot](http://youtu.be/enHw2Hk0K3w?hd=1)](http://youtu.be/enHw2Hk0K3w?hd=1)
+#####Screencast for FileIO:
+[![ScreenShot](https://github.com/Shraddha512/AdvancedDocker/blob/master/images/yToM6o8Ec.png)](http://youtu.be/enHw2Hk0K3w?hd=1)
 
 #### 2. Task 2 
 **Ambassador pattern**: Implement the remote ambassador pattern to encapsulate access to a redis container by a container on a different host.
@@ -73,7 +72,8 @@ Output:
 
 ![redis client](https://github.com/Shraddha512/AdvancedDocker/blob/master/images/Screen%20Shot%202015-11-22%20at%2011.21.56%20PM.png)
 
-[![ScreenShot](http://youtu.be/WLpar8HLaGE?hd=1)](http://youtu.be/WLpar8HLaGE?hd=1)
+#####Screencast for Ambassador:
+[![ScreenShot](https://github.com/Shraddha512/AdvancedDocker/blob/master/images/yToM6o8Ec.png)](http://youtu.be/WLpar8HLaGE?hd=1)
 
 #### 3. Task 3 
 **Docker Deploy**: Extend the deployment workshop to run a docker deployment process.
@@ -99,5 +99,7 @@ git add main.js
 git commit -m "test"
 git push green master
 ```
-[![ScreenShot](http://youtu.be/h9A83OG4-3g?hd=1)](http://youtu.be/h9A83OG4-3g?hd=1)
+
+#####Screencast for Deployment:
+[![ScreenShot](https://github.com/Shraddha512/AdvancedDocker/blob/master/images/yToM6o8Ec.png)](http://youtu.be/h9A83OG4-3g?hd=1)
 
