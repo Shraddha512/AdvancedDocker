@@ -9,7 +9,7 @@
 * Use socat to map file access to read file container and expose over port 9001 (hint can use SYSTEM + cat).
 * Use a linked container that access that file over network. The linked container can just use a command such as curl to access data from other container.
 
-Container1 contains the code to create a new file and output to it:
+Container1 folder contains the [Dockerfile](https://github.com/Shraddha512/AdvancedDocker/blob/master/FileIO/container1/Dockerfile) to create a container which creates new file and output to it:
 ```
 FROM ubuntu:14.04
 MAINTAINER Shraddha Naik
@@ -29,7 +29,7 @@ sudo docker build -t file1 .
 sudo docker run -d --name container1 file1
 
 ```
-Container2 is a linked container which accesses the data from the other container using curl. Its dockerfile contains the following:
+Container2 folder has a [Dockerfile](https://github.com/Shraddha512/AdvancedDocker/blob/master/FileIO/container1/container2/Dockerfile) which creates a linked container which accesses the data from the other container using curl. Its dockerfile contains the following:
 ```
 FROM ubuntu:14.04
 MAINTAINER Shraddha Naik
@@ -54,11 +54,11 @@ I create two ec2 instances, each having docker-compose.yml files.
 In the first instance we create two containers : ambassador and redis
 In the second instance we create two containers : ambassador and redis_client
 
-On the server :
+On the [server](https://github.com/Shraddha512/AdvancedDocker/blob/master/Ambassador/Server/docker-compose.yml) :
 ```
 docker-compose up -d
 ```
-On the client :
+On the [client](https://github.com/Shraddha512/AdvancedDocker/blob/master/Ambassador/Server/docker-compose.yml) :
 ```
 docker-compose run redis_client
 ```
@@ -71,17 +71,17 @@ docker-compose run redis_client
 * Deploy the dockerized [simple node.js App](https://github.com/CSC-DevOps/App) to blue or green slice.
 * Add appropriate hook commands to pull from registery, stop, and restart containers.
 
-I followed the steps in the Deployment workshop and created the directory structure for deploy.
-Create a post-commit hook for the application.
+I followed the steps in the Deployment workshop and created the directory structure for [deploy](https://github.com/Shraddha512/AdvancedDocker/tree/master/Deployment/deploy).
+Create a [post-commit](https://github.com/Shraddha512/AdvancedDocker/blob/master/Deployment/App/post-commit) hook for the application.
 Created a post-receive hook for blue and green slice.
 
-To check the deployment I make a small change in main.js, then for blue :
+To check the deployment I make a small change in main.js, then for [blue](https://github.com/Shraddha512/AdvancedDocker/blob/master/Deployment/deploy/blue.git/hooks/post-receive) :
 ```
 git add main.js
 git commit -m "test"
 git push blue master
 ```
-for green :
+for [green](https://github.com/Shraddha512/AdvancedDocker/blob/master/Deployment/deploy/green.git/hooks/post-receive) :
 ```
 git add main.js
 git commit -m "test"
